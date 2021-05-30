@@ -1,0 +1,339 @@
+body {
+  font: 16px/28px arial, sans-self;
+  background-color: rgb(206, 206, 206);
+  color: #333;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  background-color: rgb(70, 70, 206);
+  justify-content: space-between;
+  color: white;
+  height: 50px;
+  position: relative;
+  z-index: 9999;
+  top: -10px;
+}
+
+nav input {
+  height: 20px;
+  width: 400px;
+  font-size: 12px/18px arial;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 55%;
+}
+
+nav img {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  position: absolute;
+  text-indent: -9999px;
+  top: 1px;
+  right: 690px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 20%;
+  justify-content: space-around;
+  position: absolute;
+  right: 200px;
+  top: -12px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.8em;
+  font-weight: bold;
+  right: 600px;
+}
+
+/* Burger menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  left: -5px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.6s;
+}
+
+/* Hamberger menu */
+
+/* Hamburger menu animator */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: rgb(205, 50, 50);
+  transform: rotate(45deg) translate(2px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+  opacity: 0;
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: rgb(205, 50, 50);
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Responsive Breakpoint */
+
+@media screen and (max-width: 650px) {
+  nav ul {
+    width: 40%;
+  }
+}
+
+/* Ukuran Mobile */
+@media screen and (max-width: 768px) {
+  nav ul {
+    /* width: 50%; */
+    /* display: none; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: -1;
+
+    background-color: blueviolet;
+    opacity: 0;
+    transition: all 1s;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Content */
+.container {
+  display: grid;
+  grid: 150px / 20% 50% 30%;
+  grid-gap: 20px;
+  background-color: rgb(206, 206, 206);
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* left bar */
+.left-bar {
+  font-size: 12px;
+}
+
+.left-bar img {
+  width: 60px;
+  height: 65px;
+  float: left;
+}
+
+.left-bar h3 {
+  float: right;
+  padding-right: 50px;
+  padding-top: 10px;
+}
+
+.left-bar p {
+  background-color: white;
+  width: 250px;
+  border-radius: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  float: inline-end;
+}
+
+/* Main menu */
+
+.main {
+}
+
+/* Created post */
+.created-post {
+  background-color: white;
+  width: 600px;
+  border-radius: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+.created-post input {
+  width: 550px;
+  height: 100px;
+  border-style: solid;
+  position: relative;
+  top: -20px;
+  align-content: center;
+}
+
+.created-post button {
+  border-style: solid;
+  font-weight: bold;
+  color: aliceblue;
+  background-color: blue;
+}
+
+/* Storeis */
+
+.stories {
+  background-color: white;
+  width: 600px;
+
+  border-style: solid;
+
+  box-sizing: border-box;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.stories h2 {
+  font-size: 16px/18px arial;
+  font-weight: bold;
+  padding-left: 10px;
+  color: #333;
+}
+
+.stories img {
+  max-width: 30px;
+  margin-left: 90px;
+}
+
+/* status */
+.status {
+  background-color: white;
+  width: 600px;
+  height: 150px;
+  border-style: solid;
+
+  box-sizing: border-box;
+  color: white;
+}
+
+.status h2 {
+  font-size: 12px;
+  padding-left: 10px;
+  font-weight: bold;
+  color: #333;
+}
+.status P {
+  font-size: 12px;
+  padding-left: 10px;
+  font-weight: lighter;
+  color: #333;
+}
+
+.status i img {
+  width: 25px;
+  height: 30px;
+  padding: 12px;
+}
+
+/* right bar */
+.right-bar {
+}
+
+.right-bar .iklan {
+  background-color: white;
+  width: 300px;
+  height: 100px;
+  border-radius: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+
+.right-bar .vidio-view {
+  background-color: white;
+  width: 300px;
+  height: 320px;
+
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+
+.right-bar .vidio-view img {
+  height: 120px;
+  margin: 5px;
+  width: 110px;
+}
+
+.vidio-view a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  position: absolute;
+  top: 470px;
+  padding-left: 12px;
+}
+
+.temen {
+  background-color: white;
+  width: 300px;
+  height: 320px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+.temen h2 {
+  font-size: 12px;
+  font-weight: bold;
+  width: 300px;
+}
+.temen img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer .chat h2 {
+  background-color: rgb(70, 70, 206);
+  position: fixed;
+  top: 600px;
+  left: 800px;
+  right: 0;
+  height: 40px;
+  width: 300px;
+  z-index: 9999;
+  color: aliceblue;
+  font-weight: normal;
+  font-size: 12px;
+  padding-right: 10px;
+  text-align: right;
+}
