@@ -27,6 +27,7 @@ nav input {
 }
 
 nav img {
+  
   width: 50px;
   height: 50px;
   display: inline-block;
@@ -109,6 +110,21 @@ nav ul li a {
   nav ul {
     width: 40%;
   }
+
+  nav input {
+    
+    width: 20%;
+    position: absolute;
+  }
+ 
+  nav {
+    display: flex;
+    
+    width: 100%;
+    z-index: 9999;
+    top: -10px;
+  }
+  
 }
 
 /* Ukuran Mobile */
@@ -141,6 +157,13 @@ nav ul li a {
   }
 }
 
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 1200px) {
+
+}
 /* Content */
 .container {
   display: grid;
