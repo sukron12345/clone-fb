@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Facebook Clone</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   </head>
   <body>
@@ -15,14 +16,14 @@
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png"
           alt=""
-        />
+         />
+         
+        
         <div class="header__input">
           <span class="material-icons"> search </span>
           <input type="text" placeholder="Search Facebook" />
         </div>
       </div>
-
-      
 
       <div class="header__right">
         <div class="header__info">
@@ -44,7 +45,7 @@
     <!-- main body starts -->
     <div class="main__body">
       <!-- sidebar starts -->
-      <div class="sidebar">
+      <div class="sidebar" id="myTopnav" >
         <div class="sidebarRow">
           <img
             class="user__avatar"
@@ -88,6 +89,7 @@
           <span class="material-icons"> expand_more </span>
           <h4>More</h4>
         </div>
+        
       </div>
       <!-- sidebar ends -->
 
@@ -143,7 +145,7 @@
           <!-- story starts -->
           <div
             style="
-              background-image: url('https://cellularnews.com/wp-content/uploads/2020/04/Delete-photo-337x600.jpg');
+              background-image: url('');
             "
             class="story"
           >
@@ -154,7 +156,7 @@
           <!-- story starts -->
           <div
             style="
-              background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTBHC2s4NFdzXEsVzvBPGjkrSePQa-8XFuNtQ&usqp=CAU');
+              background-image: url('');
             "
             class="story"
           >
@@ -166,7 +168,7 @@
           <!-- story starts -->
           <div
             style="
-              background-image: url('https://images.unsplash.com/photo-1527082395-e939b847da0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+              background-image: url('');
             "
             class="story"
           >
@@ -177,7 +179,7 @@
           <!-- story starts -->
           <div
             style="
-              background-image: url('https://cellularnews.com/wp-content/uploads/2020/04/Delete-photo-337x600.jpg');
+              background-image: url('');
             "
             class="story"
           >
@@ -188,7 +190,7 @@
           <!-- story starts -->
           <div
             style="
-              background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTBHC2s4NFdzXEsVzvBPGjkrSePQa-8XFuNtQ&usqp=CAU');
+              background-image: url('');
             "
             class="story"
           >
@@ -317,6 +319,21 @@
       crossorigin="anonymous"
       src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0"
       nonce="zUxEq08J"
-    ></script>
+
+
+    >
+  
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "sidebar") {
+    x.className += " responsive";
+  } else {
+    x.className = "sidebar";
+  }
+
+  $(document).ready(function(){});
+}
+
+  </script>
   </body>
 </html>
