@@ -337,7 +337,8 @@ body {
     position: fixed;
     background: #eff2f5;
     width: 470px;
-    height: 800px;
+    height: 450px;
+    z-index: 99999;
   }
   .sidebar {
     display: none;
