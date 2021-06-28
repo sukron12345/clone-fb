@@ -7,6 +7,10 @@
   height: 40px;
 }
 
+.header__left i {
+  display: none;
+}
+
 .user__avatar {
   border-radius: 50%;
   width: 45px;
@@ -347,6 +351,7 @@ body {
   .header__left i {
     color: #eff2f5;
     font-size: 30px;
+    display: inherit;
   }
 
   .header__left img {
